@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DemoShop</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="register.css">
+    <script src="register.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="../index.php">
+                <img src="../img/MyComputer.ico" />
+            </a>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li>
+                    <a href="../index.php">Home</a>
+                </li>
+                <li>
+                    <a href="#categories">Categories</a>
+                </li>
+                <li>
+                    <a href="#discounts">Discounts</a>
+                </li>
+            </ul>
+        </nav>
+        <aside>
+            <a href="../login/login.php">Login</a>
+            <a href="register.php" class="button highlight">Register</a>
+        </aside>
+    </header>
+    <!-- BEGIN ERROR_MESSAGE -->
+    <div class="message-container">
+    {ERROR_MESSAGE}
+    </div>
+    <!-- END ERROR_MESSAGE -->
+    <!-- BEGIN REGISTER -->
+    <form action="register_action.php" method="post">
+        <div class="register-container">
+            <h1>Register</h1>
+            <label>Name: </label><input name="name" type="text" value="{NAME}">
+            <label>Email: </label><input name="email" type="email" value="{EMAIL}">
+            <label>Password: </label><input name="password" type="password" value="{PASSWORD}">
+            <label>Password Confirmation: </label><input name="password_confirmation" type="password" value="{PASSWORD_CONF}">
+            <div>
+                <button class="btn-success" type="submit"><span>SUBMIT</span></button>
+                <button class="btn-danger" type="reset"><span>CLEAR</span></button>
+            </div>
+        </div>
+    </form>
+    <!-- END REGISTER -->
+</body>
+</html>

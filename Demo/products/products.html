@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DemoShop</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="products.css">
+    <script src="products.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="../index.php">
+                <img src="../img/MyComputer.ico" />
+            </a>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li>
+                    <a href="../index.php">Home</a>
+                </li>
+                <li>
+                    <div class="menu-dropdown">
+                        <a class="menu-dropbtn">Categories
+                        </a>
+                        <div class="menu-dropdown-content">
+                            <!-- BEGIN CATEGORIES -->
+                            {CATEGORIES}
+                            <!-- END CATEGORIES -->
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="../index.php?discount=1">Discounts</a>
+                </li>
+            </ul>
+        </nav>
+        <aside>
+            <!-- BEGIN MENU -->
+            <a class="cart" href="../cart/checkout.php">
+                <span>{CART}</span>
+            </a>
+            {MENU1}
+            {MENU2}
+            {MENU3}
+        </aside>
+        <div class="dropdown">
+            <button onclick="menuToggle()" class="menu-toggle dropbtn">
+                <i></i>
+            </button>
+            <div id="myDropdown" class="dropdown-content">
+                <div class="menu-show">
+                    <a href="../index.php">Home</a>
+                    <a href="../index.php?discount=1">Discounts</a>
+                </div>
+                <div class="aside-show">
+                    <a href="../cart/checkout.php">Checkout</a>
+                    {MENU1}
+                    {MENU2}
+                </div>
+            </div>
+        </div>
+        <!-- END MENU -->
+    </header>
+    <div class="product-main-container">
+        <!-- BEGIN PRODUCT -->
+            <img class="small" src="../img/{PRODUCT_IMAGE}"/>
+            <div class="product_main_info">
+                <h1>{PRODUCT_NAME}</h1>
+                <div>
+                    <form action="../cart/cart.php" method="post">
+                        <input type="hidden" name="product_id" value="{PRODUCT_ID}">
+                        <button class="add_to_cart_button" type="submit">ADD TO CART</button>
+                    </form>
+                    <div class="product_prices">
+                        <span class="old_price">{PRODUCT_OLD_PRICE}</span>
+                        <span class="new_price">{PRODUCT_PRICE}</span>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div class="product-details-container">
+        <div class="product-detail"><span class="product-description-name">DESCRIPTION: </span><span class="product-description-value">{PRODUCT_DESCRIPTION}</span></div>
+        <div class="product-detail"><span class="product-brand-name">BRAND: </span><span class="product-brand-value">{PRODUCT_BRAND}</span></div>
+        <div class="product-detail"><span class="product-warranty-name">WARRANTY: </span><span class="product-warranty-value">{PRODUCT_WARRANTY}</span></div>
+    </div>
+    <!-- END PRODUCT -->
+</body>
+</html>

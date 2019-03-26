@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DemoShop</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="login.css">
+    <script src="login.js"></script>
+</head>
+<body>
+<header class="header">
+    <div class="logo">
+        <a href="../index.php">
+            <img src="../img/MyComputer.ico" />
+        </a>
+    </div>
+    <nav class="menu">
+        <ul>
+            <li>
+                <a href="../index.php">Home</a>
+            </li>
+            <li>
+                <a href="#categories">Categories</a>
+            </li>
+            <li>
+                <a href="#discounts">Discounts</a>
+            </li>
+        </ul>
+    </nav>
+    <aside>
+        <a href="login.php">Login</a>
+        <a href="../register/register.php" class="button highlight">Register</a>
+    </aside>
+</header>
+    <!-- BEGIN ERROR_MESSAGE -->
+    <div class="message-container">
+        {ERROR_MESSAGE}
+    </div>
+    <!-- END ERROR_MESSAGE -->
+    <form action="login_action.php" method="post">
+        <div class="login-container">
+            <!-- BEGIN FORM_TITLE -->
+            <h1>{LOGIN}</h1>
+            <!-- END FORM_TITLE -->
+            <label>Email: </label><input name="email" type="email">
+            <label>Password: </label><input name="password" type="password">
+            <div>
+                <button class="btn-success" type="submit"><span>SUBMIT</span></button>
+                <button class="btn-danger" type="reset"><span>CLEAR</span></button>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

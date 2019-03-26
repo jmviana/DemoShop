@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DemoShop</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="index.php">
+                <img src="img/MyComputer.ico" />
+            </a>
+        </div>
+        <nav class="menu">
+            <!-- BEGIN MENU -->
+            <ul>
+                {TABS}
+            </ul>
+        </nav>
+        <aside>
+            <a class="cart" href="cart/checkout.php">
+                <span>{CART}</span>
+            </a>
+            {MENU1}
+            {MENU2}
+            {MENU3}
+        </aside>
+        <div class="dropdown">
+            <button onclick="menuToggle()" class="menu-toggle dropbtn">
+            </button>
+            <div id="myDropdown" class="dropdown-content">
+                <div class="menu-show">
+                    <a href="index.php">Home</a>
+                    <a href="index.php?discount=1">Discounts</a>
+                </div>
+                <div class="aside-show">
+                    <a href="cart/checkout.php">Checkout</a>
+                    {MENU1}
+                    {MENU2}
+                </div>
+            </div>
+        </div>
+        <!-- END MENU -->
+    </header>
+    <div class="products-container">
+    <!-- BEGIN PRODUCTS -->
+        <a href="products/products.php?product_id={PRODUCT_ID}">
+        <div class='product'>
+            <img src='img/{IMAGE}' />
+            <div class='product-name'><h4>{PRODUCT_NAME}</h4></div>
+            <div class='product-price'>
+                <span class='old-price'>{OLD_PRICE}</span>
+                <span class='new-price'>{NEW_PRICE}</span>
+            </div>
+        </div>
+        </a>
+    <!-- END PRODUCTS -->
+    </div>
+</body>
+</html>

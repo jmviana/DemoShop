@@ -1,0 +1,379 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+    background-color: #333344;
+}
+
+.header {
+    position: fixed;
+    background-color: #1E1E33;
+    height: 80px;
+    width: 100%;
+    top: 0;
+    border-bottom: solid 3px #6D6D84;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header .logo {
+    height: 80px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: 40px;
+}
+
+header .logo img {
+    height: 100%;
+}
+
+.header a {
+    text-decoration: none;
+    color: #eee;
+    font-size: 1.3em;
+}
+
+.menu .cat-link {
+    font-size: 0.7em;
+}
+
+.menu .cat-link:hover {
+    background-color: #ddd;
+}
+
+/* The dropdown container */
+.menu-dropdown {
+    float: left;
+    overflow: hidden;
+    padding: 15px;
+}
+
+/* Dropdown button */
+.menu-dropdown .menu-dropbtn {
+    font-size: 20px;
+    color: white;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+}
+
+/* Dropdown content (hidden by default) */
+.menu-dropdown-content {
+    display: none;
+    position: absolute;
+    top: 65px;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.menu-dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.menu-dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.menu-dropdown:hover .menu-dropdown-content {
+    display: block;
+}
+
+.header div {
+    color: #eee;
+    font-size: 1.3em;
+    float: right;
+    margin: 0 20px;
+}
+
+.menu {
+    flex-grow: 10;
+}
+
+@media (max-width: 650px) {
+    .menu {
+        display: none;
+    }
+}
+
+@media (min-width: 650px) {
+    .menu-show {
+        display: none;
+    }
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.menu li {
+    margin: 0px 10px;
+}
+
+.menu a {
+    padding: 15px;
+}
+
+.menu a:hover,
+.menu a.selected {
+    background-color: #6D6D84;
+    color: #111;
+}
+
+.header .button {
+    border-radius: 30px;
+    padding: 10px 25px;
+    margin-right: 10px;
+}
+
+.highlight {
+    background: #F50A31;
+    color: #eee;
+}
+
+.menu-toggle {
+    color: #eee;
+    background-color: #555;
+    border: solid 1px #777;
+    border-radius: 5px;
+    height: 40px;
+    width: 40px;
+    padding: 10px 20px;
+    margin: 20px 15px;
+    background-image: url("../img/menu-toggle.png");
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 2;
+
+}
+
+.dropbtn:hover {
+    background-color: #666;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 2.2em;
+    right: 2.2em;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    font-size: 20px;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show the dropdown menu (uses JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+@media(min-width: 1150px) {
+    .menu-toggle {
+        display: none;
+    }
+}
+
+header aside {
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 1150px) {
+    header aside {
+        display: none;
+    }
+}
+
+header aside a {
+    margin: 10px 20px;
+}
+
+.cart {
+    margin: 0 40px;
+    width: 3.8vw;
+    height: 3.8vw;
+    text-align: center;
+    position: relative;
+    background-image: url("../img/shopping-cart.png");
+    background-size: 3.8vw;
+}
+
+.cart span {
+    position: absolute;
+    top: 0.3vw;
+    right: 0.2vw;
+    font-size: 0.8vw;
+}
+
+.product-main-container {
+    display: flex;
+    grid-column-gap: 3em;
+    margin-top: 140px;
+    margin-bottom: 20px;
+    margin-left: 14.5%;
+    margin-right: 14.5%;
+    padding: 3%;
+    background-color: #555566bb;
+    box-shadow: 0 0 20px 5px rgba(200, 200, 255, 0.3);
+    border-radius: 20px;
+    border: 1px solid #dddb;
+}
+
+.product-main-container img {
+    border-radius: 20px;
+    width: 50%;
+    height: 50%;
+}
+
+.product-main-container .product_main_info h1 {
+    color: #fff;
+    font-size: 2.5vw;
+}
+
+.product-main-container .product_main_info div {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 25%;
+}
+
+.product-main-container .product_main_info div .add_to_cart_button {
+    width: 17vw;
+    height: 4vw;
+    font-weight: bold;
+    font-size: 1vw;
+    margin-right: 1vw;
+    color: #FFF;
+    background: linear-gradient(120deg, #6D6D84, #8F8FA6);
+    border: 2px solid white;
+}
+
+.product-main-container .product_main_info div .add_to_cart_button:hover {
+    background: linear-gradient(120deg, #7E7E95, #9F9FB6);
+}
+
+.product-main-container .product_main_info div form {
+    width: 17vw;
+    height: 4vw;
+    align-self: center;
+}
+
+.product-main-container .product_main_info div .product_prices {
+    float: right;
+    display: flex;
+    flex-direction: column;
+    align-self: end;
+    margin-left: 1vw;
+}
+
+.product-main-container .product_main_info div .product_prices .old_price {
+    color: coral;
+    font-size: 1.5vw;
+    text-decoration: line-through;
+}
+
+.product-main-container .product_main_info div .product_prices .new_price {
+    color: lawngreen;
+    font-size: 4.5vw;
+}
+
+.product-details-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    margin: 50px 14.5%;
+    padding: 3%;
+    background-color: #555566bb;
+    box-shadow: 0 0 20px 5px rgba(200, 200, 255, 0.3);
+    border-radius: 20px;
+    border: 1px solid #dddb;
+    color: white;
+}
+
+.product-details-container .product-detail {
+    font-weight: bold;
+    border-bottom: 2px dotted white;
+}
+
+.product-details-container .product-description-value {
+    float: right;
+}
+
+.product-details-container .product-brand-value {
+    float: right;
+}
+
+.product-details-container .product-warranty-value {
+    float: right;
+}
+
+@media (max-width: 900px) {
+    .product-main-container {
+        flex-direction: column;
+    }
+
+    .product-main-container img {
+        width: 100%;
+    }
+
+    .product-main-container .product_main_info h1 {
+        font-size: 4vw;
+        margin: 2vw 0;
+    }
+
+    .product-main-container .product_main_info div {
+        position: static;
+    }
+
+    .product-main-container .product_main_info div .add_to_cart_button {
+        width: 27vw;
+        height: 9vw;
+        margin-left: 2vw;
+        font-size: 2.5vw;
+    }
+
+    .product-main-container .product_main_info div .product_prices {
+        flex-direction: row;
+        align-items: baseline;
+        column-gap: 2vw;
+    }
+
+    .product-main-container .product_main_info div .product_prices .old_price {
+        font-size: 2.5vw;
+    }
+
+    .product-main-container .product_main_info div .product_prices .new_price {
+        font-size: 7vw;
+    }
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DemoShop</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="cart.css">
+    <script src="cart.js"></script>
+</head>
+<body>
+<header class="header">
+    <div class="logo">
+        <a href="../index.php">
+            <img src="../img/MyComputer.ico" />
+        </a>
+    </div>
+    <nav class="menu">
+        <ul>
+            <li>
+                <a href="../index.php">Home</a>
+            </li>
+            <li>
+                <div class="menu-dropdown">
+                    <a class="menu-dropbtn">Categories
+                    </a>
+                    <div class="menu-dropdown-content">
+                        <!-- BEGIN CATEGORIES -->
+                        {CATEGORIES}
+                        <!-- END CATEGORIES -->
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a href="../index.php?discount=1">Discounts</a>
+            </li>
+        </ul>
+    </nav>
+    <aside>
+        <!-- BEGIN MENU -->
+        <a class="cart" href="checkout.php">
+            <span>{CART}</span>
+        </a>
+        {MENU1}
+        {MENU2}
+        {MENU3}
+    </aside>
+    <div class="dropdown">
+        <button onclick="menuToggle()" class="menu-toggle dropbtn">
+            <i></i>
+        </button>
+        <div id="myDropdown" class="dropdown-content">
+            <div class="menu-show">
+                <a href="../index.php">Home</a>
+                <a href="../index.php?discount=1">Discounts</a>
+            </div>
+            <div class="aside-show">
+                <a href="checkout.php">Checkout</a>
+                {MENU1}
+                {MENU2}
+            </div>
+        </div>
+    </div>
+    <!-- END MENU -->
+</header>
+<div class="checkout-container">
+    <!-- BEGIN ORDERS_INFO -->
+    {ORDERS_TITLE}
+    {NO_ORDERS}
+    <!-- END ORDERS_INFO -->
+    <!-- BEGIN ORDERS -->
+    {ORDERS}
+    <!-- END ORDERS -->
+</div>
+</body>
+</html>
