@@ -2,7 +2,8 @@
 
 require_once "../db.php";
 require_once "../HTML/Template/PEAR.php";
-require_once "../HTML/Template/IT.php"; ?>
+require_once "../HTML/Template/IT.php"; 
+session_start(); ?>
 
 <style>
     <?php require_once "../index.css"; ?>
@@ -16,7 +17,6 @@ if ($db) {
     $template = new HTML_Template_IT('.');
 
     $template->loadTemplatefile('../message_template.html', true, true);
-    session_start();
 
     if (isset($_SESSION['orderId'])) {
 
